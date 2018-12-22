@@ -58,3 +58,4 @@ curl -X POST "http://localhost:2222/person" -H "accept: */*" -H "Content-Type: a
 curl -X POST "http://localhost:2222/person" -H "accept: */*" -H "Content-Type: application/json" -d "{ \"age\": 30, \"firstName\": \"Sally\", \"gender\": \"FEMALE\", \"lastName\": \"Cox\"}"
 ```
 
+# Run the profile using ```-Dspring.profiles.active=production```
