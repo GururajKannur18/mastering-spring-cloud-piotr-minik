@@ -1,0 +1,21 @@
+spring:  
+  application:
+    name: client-service
+
+server:  
+  port: ${PORT:8081}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+  # Refreshing the registry    
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+  
+# Deregistration on shutdown
+endpoints:
+  shutdown:
+    enabled: true
+    sensitive: false
