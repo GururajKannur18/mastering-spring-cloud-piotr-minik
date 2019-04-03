@@ -1,0 +1,22 @@
+server:
+  port: 8088
+  
+  
+# This is needed to File System Based 
+#spring:
+#  profiles:
+#    active:
+#    - native
+
+# This is needed if you prefer to choose git based 
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/JavaHelper/PiotrsTechBlogExample1
+          # This is very much needed if you've .yml files under folder in git.
+          search-paths:
+          - 'config*'
+  application:
+    name: config-service
